@@ -14,6 +14,13 @@ public class SecondMain {
         System.out.println(bankOperation3);
         BankOperation bankOperation4 = bank.createOperetion(lppolit, OperationType.MORTGAGE, 5000);
         System.out.println(bankOperation4);
+
+        String str = "TEEN";
+
+
+        AgeCategory ageCategory = AgeCategory.valueOf(str);
+        System.out.println(ageCategory);
+        ageCategory.ordinal();
     }
 }
 
