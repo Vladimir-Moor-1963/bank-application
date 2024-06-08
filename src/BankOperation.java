@@ -9,6 +9,8 @@ public class BankOperation {
     private long toid;
     private OperationType type;
 
+    private static final double BASE_CREDIT_RETE = 1.0;
+
     public BankOperation(long id, double amount, long fromid, long toid, OperationType type)
     {
         this.id = id;
@@ -17,17 +19,14 @@ public class BankOperation {
         this.toid = toid;
         this.type = type;
     }
-    public double calculateCreditRate(){
-        if (type == OperationType.CREDIT){
-            return  1.06;
+
+
+    public double calculateCreditRate() {
+        if (type != null) {
+            return type.getCreditRate();
         }
-        if (type == OperationType.DEBIT){
-            return 1.04;
-        }
-        if (type == OperationType.MORTGAGE){
-            return 1.05;
-        }
-        return 1.00;
+
+        return BASE_CREDIT_RETE;
     }
 
     @Override
