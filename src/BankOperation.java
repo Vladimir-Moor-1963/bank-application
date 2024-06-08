@@ -28,6 +28,16 @@ public class BankOperation {
 
         return BASE_CREDIT_RETE;
     }
+    public void printInfo(){
+        switch (type){
+            case DEBIT -> System.out.println("Мы положили деньги в банк");
+            case MORTGAGE -> System.out.println("Ура я живу не на улице");
+            case CREDIT -> System.out.println("Кредит, ок");
+
+        }
+
+    }
+
 
     @Override
     public String toString() {

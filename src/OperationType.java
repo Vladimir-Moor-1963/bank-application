@@ -4,6 +4,7 @@ public enum OperationType {
     MORTGAGE("Выгодная ипотека",1.05),
     DEBIT("Сберегательный",1.04);
 
+
     private String name;
 
     private double creditRate;

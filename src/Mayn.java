@@ -16,6 +16,10 @@ public class Mayn {
         System.out.println(debit);
         System.out.println(mortgage);
 
+        bankOperationCredit.printInfo();
+        bankOperationDebit.printInfo();
+        bankOperationMortgage.printInfo();
+
 
 
 
