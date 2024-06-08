@@ -34,6 +34,18 @@ public class Bank {
                 ", name='" + name + '\'' +
                 '}';
     }
+    public BankOperation createOperetion(Person person,OperationType operationType,double amount){
+        if (person == null){
+            return null;
+
+        }
+        if (person.getCategory() == AgeCategory.CHILD || (person.getCategory() == AgeCategory.TEEN && operationType != OperationType.DEBIT)){
+            return null;
+        }
+            
+        BankOperation bankOperation = new BankOperation(0,amount,id, person.getId(), operationType);
+        return bankOperation;
+    }
 
     public long getId() {
         return id;
