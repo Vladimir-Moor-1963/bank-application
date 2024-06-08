@@ -8,24 +8,8 @@ public class Person {
     public Person(long id, String name, int age) {
         this.id = id;
         this.name = name;
-        if ( age > 0 && age < 14){
-            this .category = AgeCategory.CHILD;
-
-        }
-        else if (age > 14 && age < 18){
-            this.category = AgeCategory.TEEN;
-        }
-        else if (age >= 18 && age <= 65){
-            this.category = AgeCategory.ADULT;
-        }
-        else {
-            this.category = AgeCategory.PENSIONER;
-        }
-
-
-        this.category = category;
-}
-
+        this.category = AgeCategory.getCategoryByAge(age);
+    }
     @Override
     public String toString() {
         return "Person{" +
